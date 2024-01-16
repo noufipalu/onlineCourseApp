@@ -5,6 +5,9 @@ class ImageIconPath {
   static const String forwardArrowIcon = 'assets/icons/forward.png';
   static const String google = 'assets/icons/google.png';
   static const String fb = 'assets/icons/facebook.png';
+  static const String linkedin = 'assets/icons/linkedin.png';
+  static const String insta = 'assets/icons/insta.png';
+  static const String tweet = 'assets/icons/twitter.png';
   static const String check = 'assets/icons/checkmark.png';
   static const String design = 'assets/icons/design.png';
   static const String wavingHand = 'assets/icons/wavingHand.png';
@@ -29,6 +32,8 @@ class ImageIconPath {
   static const String suppch = 'assets/images/supplyChain.png';
   static const String uides = 'assets/images/uiDes.png';
   static const String people = 'assets/images/people.png';
+  static const String user1 = 'assets/images/user1.png';
+  static const String user2 = 'assets/images/user2.png';
 
   static const Icon email = Icon(Icons.email_outlined);
   static const Icon pass = Icon(Icons.lock_outline);

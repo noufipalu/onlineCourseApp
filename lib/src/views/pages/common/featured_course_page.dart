@@ -13,6 +13,7 @@ class FeaturedCoursePage extends StatefulWidget {
 }
 
 class _FeaturedCoursePageState extends State<FeaturedCoursePage> {
+  int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

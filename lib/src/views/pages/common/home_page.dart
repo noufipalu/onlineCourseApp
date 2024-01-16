@@ -4,7 +4,12 @@ import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
 import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/featured_course_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/message_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/saved_courses_page.dart';
+import 'package:onlinecourseapp/src/views/widgets/container_course_name.dart';
 import 'package:onlinecourseapp/src/views/widgets/course_details_widget.dart';
+import 'package:onlinecourseapp/src/views/widgets/course_title_widget.dart';
+import 'package:onlinecourseapp/src/views/widgets/review_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -377,19 +382,59 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
                 child: SizedBox(
-                  height: 275,
+                  height: 350,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
-                    children: const [
-                      CourseDetailsWidget(
-                        courseimage: AssetImage(ImageIconPath.ui),
-                        constring: Strings.uiux,
-                        txtstring: Strings.cname1,
-                        price: Strings.pr1,
-                        rating: Strings.st1,
-                        rew: Strings.rev1,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            bottom: 5, top: 0, right: 5, left: 15),
+                        child: Container(
+                          height: 320,
+                          width: (MediaQuery.of(context).size.width) / 1.25,
+                          decoration: BoxDecoration(
+                            color: Colors.white60,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(10, 10, 10, 3),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image(
+                                  image: AssetImage(ImageIconPath.ui),
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                CourseNameWidget(constring: Strings.uiux),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                CourseTitleWidget(txtstring: Strings.cname1),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    ReviewWidget(
+                                      rating: Strings.st1,
+                                      rew: Strings.rev1,
+                                    ),
+                                    Text(
+                                      Strings.pr1,
+                                      style: AppTheme.bttTheme,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ),
-                      CourseDetailsWidget(
+                      const CourseDetailsWidget(
                         courseimage: AssetImage(ImageIconPath.suppch),
                         constring: Strings.bussman,
                         txtstring: Strings.cname2,
@@ -397,7 +442,7 @@ class _HomePageState extends State<HomePage> {
                         rating: Strings.st2,
                         rew: Strings.rev2,
                       ),
-                      CourseDetailsWidget(
+                      const CourseDetailsWidget(
                         courseimage: AssetImage(ImageIconPath.uides),
                         constring: Strings.uiux,
                         txtstring: Strings.cname1,
@@ -433,7 +478,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const SavedCoursesPage(),
                         ),
                       );
                       break;
@@ -449,7 +494,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MessagePage(),
                         ),
                       );
                       break;

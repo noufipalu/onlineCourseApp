@@ -55,6 +55,11 @@ class AppTheme {
     color: Colors.black87,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle pageSubTitle = TextStyle(
+    fontSize: 14,
+    color: Colors.black87,
+    fontWeight: FontWeight.w500,
+  );
   static const TextStyle formHint = TextStyle(
     fontSize: 12,
     color: Colors.black45,
@@ -63,6 +68,11 @@ class AppTheme {
   static const TextStyle formText = TextStyle(
     fontSize: 14,
     color: AppColors.line,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle date = TextStyle(
+    fontSize: 14,
+    color: AppColors.conBg,
     fontWeight: FontWeight.w400,
   );
   static const TextStyle formTextStyle = TextStyle(
@@ -78,6 +88,11 @@ class AppTheme {
     fontSize: 14,
     color: AppColors.containerBG,
     fontWeight: FontWeight.w300,
+  );
+  static const TextStyle conText = TextStyle(
+    fontSize: 15,
+    color: AppColors.containerBG,
+    fontWeight: FontWeight.w600,
   );
   static const TextStyle conTitle = TextStyle(
     fontSize: 24,

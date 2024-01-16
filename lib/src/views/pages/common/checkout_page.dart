@@ -16,6 +16,7 @@ class CheckoutPage extends StatefulWidget {
 
 class _CheckoutPageState extends State<CheckoutPage> {
   bool isChecked = false;
+  String paymentMethod = Strings.pay;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +24,9 @@ class _CheckoutPageState extends State<CheckoutPage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
@@ -54,7 +56,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
                         Padding(
@@ -95,29 +97,20 @@ class _CheckoutPageState extends State<CheckoutPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 const Text(
                   Strings.pay,
+                  style: AppTheme.pageTitle,
                 ),
-                Column(
-                  children: [
-                    CheckboxListTile(
-                      title: const Text(Strings.master),
-                      subtitle: const Text('xxxx xxxx xxxx xxxx'),
-                      secondary: Image.asset(
-                        ImageIconPath.masterCard,
-                        height: 25,
-                        width: 25,
-                      ),
-                      value: isChecked,
-                      onChanged: (value) {
-                        setState(() {
-                          isChecked = value!;
-                        });
-                      },
-                    ),
-                  ],
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  decoration: const BoxDecoration(color: Colors.white),
+                  child: Column(
+                    children: [],
+                  ),
                 ),
               ],
             ),

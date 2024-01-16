@@ -71,6 +71,7 @@ class Strings {
   static const String home = 'Home';
   static const String favs = 'Saved';
   static const String course = 'Courses';
+  static const String savedcourse = 'Saved Courses';
   static const String msgs = 'Messages';
   static const String user = 'Profile';
   static const String uiux = 'UI/UX Design';
@@ -85,6 +86,7 @@ class Strings {
   static const String pr1d = '\$2';
   static const String cname1 = 'User Interface Design Essentials';
   static const String cname2 = 'Supply Chain Management';
+  static const String cname3 = 'Build Wireframe for Design';
   static const String featured = 'Featured Courses';
   static const String t1 = '5 hours 30 mins';
   static const String tutor1 = 'Johnson Mate';
@@ -106,4 +108,11 @@ class Strings {
   static const String exdate = 'Expiry Date';
   static const String paynow = 'Pay Now';
   static const String add = 'Add Card';
+  static const String mentor = 'Mentor Profile';
+  static const String fav = 'Favourite';
+  static const String rew = 'Reviews';
+  static const String tutAbt =
+      "It is a long establishment fact that a reader will be distracted by the redable content of a page when looking as it's layout. The point of using Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
+  static const String rew1 =
+      "It is a long establishment fact that a reader will be distracted by the redable content of a page when looking as it's layout. The point of using Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 }
