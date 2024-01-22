@@ -111,6 +111,7 @@ class Strings {
   static const String mentor = 'Mentor Profile';
   static const String fav = 'Favourite';
   static const String rew = 'Reviews';
+  static const String msg = 'Type something...';
   static const String tutAbt =
       "It is a long establishment fact that a reader will be distracted by the redable content of a page when looking as it's layout. The point of using Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
   static const String rew1 =

@@ -15,7 +15,7 @@ class SavedCoursesPage extends StatefulWidget {
 }
 
 class _SavedCoursesPageState extends State<SavedCoursesPage> {
-  int currentIndex = 1;
+  int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,7 +105,7 @@ class _SavedCoursesPageState extends State<SavedCoursesPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SavedCoursesPage(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                       break;
@@ -113,7 +113,7 @@ class _SavedCoursesPageState extends State<SavedCoursesPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const SavedCoursesPage(),
                         ),
                       );
                       break;

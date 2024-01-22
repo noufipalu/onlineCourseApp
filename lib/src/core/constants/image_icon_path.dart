@@ -43,4 +43,5 @@ class ImageIconPath {
   static const Icon search = Icon(Icons.search_outlined);
   static const Icon star = Icon(Icons.star);
   static const Icon msg = Icon(Icons.message);
+  static const Icon phone = Icon(Icons.phone);
 }

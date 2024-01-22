@@ -5,6 +5,7 @@ import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/home_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/saved_courses_page.dart';
+import 'package:onlinecourseapp/src/views/widgets/chat_list_widget.dart';
 
 class MessagePage extends StatefulWidget {
   const MessagePage({super.key});
@@ -18,38 +19,165 @@ class _MessagePageState extends State<MessagePage> {
   Widget build(BuildContext context) {
     int currentIndex = 3;
     return Scaffold(
+      backgroundColor: AppColors.containerBG,
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const Center(
-                child: Text(
-                  Strings.msgs,
-                  style: AppTheme.pageTitle,
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                const Center(
+                  child: Text(
+                    Strings.msgs,
+                    style: AppTheme.pageTitle,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              SearchAnchor(
-                builder: (BuildContext context, SearchController controller) {
-                  return SearchBar(
-                    controller: controller,
-                    onTap: () {
-                      controller.openView();
-                    },
-                    onChanged: (_) {
-                      controller.openView();
-                    },
-                    leading: ImageIconPath.search,
-                  );
-                },
-                suggestionsBuilder:
-                    (BuildContext context, SearchController controller) {
-                  return List.empty();
-                },
-              ),
-            ],
+                const SizedBox(
+                  height: 20,
+                ),
+                SearchAnchor(
+                  builder: (BuildContext context, SearchController controller) {
+                    return SearchBar(
+                      controller: controller,
+                      onTap: () {
+                        controller.openView();
+                      },
+                      onChanged: (_) {
+                        controller.openView();
+                      },
+                      leading: ImageIconPath.search,
+                    );
+                  },
+                  suggestionsBuilder:
+                      (BuildContext context, SearchController controller) {
+                    return List.empty();
+                  },
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+                ChatListWidget(
+                  title: 'Cody Fisher',
+                  subTitle: 'I started my assignment today',
+                  image: ImageIconPath.user1,
+                  lastChatTime: DateTime(2023, 01, 16),
+                  unreadCount: 2,
+                ),
+                Container(
+                  width: (MediaQuery.of(context).size.width) / 1.25,
+                  height: 1.75,
+                  color: AppColors.lineDec,
+                ),
+              ],
+            ),
           ),
         ),
       ),

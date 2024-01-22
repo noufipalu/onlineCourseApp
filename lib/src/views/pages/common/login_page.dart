@@ -778,7 +778,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         onPressed: () {
-                          if (MediaQuery.of(context).size.width <= 360) {
+                          if (MediaQuery.of(context).size.width >= 360) {
                             _showActionSheet(context);
                           } else {
                             Navigator.of(context).push(

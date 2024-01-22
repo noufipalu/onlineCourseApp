@@ -478,7 +478,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const SavedCoursesPage(),
+                          builder: (context) => const HomePage(),
                         ),
                       );
                       break;
@@ -486,7 +486,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const SavedCoursesPage(),
                         ),
                       );
                       break;
