@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const Color gradBlue = Color.fromRGBO(28, 204, 193, 1);
-  static const Color gradGreen = Color.fromRGBO(102, 222, 191, 1);
+  static const Color gradGreen = Color.fromRGBO(28, 204, 193, 1);
   static const Color containerBG = Color.fromARGB(255, 248, 247, 247);
   static const Color line = Color.fromARGB(255, 220, 217, 217);
   static const Color iconColor = Color.fromARGB(255, 206, 203, 203);

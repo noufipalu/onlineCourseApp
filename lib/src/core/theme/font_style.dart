@@ -13,6 +13,11 @@ class AppTheme {
     color: Colors.black,
     fontWeight: FontWeight.w500,
   );
+  static const TextStyle sheeTheme = TextStyle(
+    fontSize: 18,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
   static const TextStyle subTitleTheme = TextStyle(
     fontSize: 13,
     color: Colors.black45,
@@ -23,6 +28,11 @@ class AppTheme {
     fontSize: 15,
     color: Colors.black,
     fontWeight: FontWeight.w600,
+    overflow: TextOverflow.clip,
+  );
+  static const TextStyle coursTheme = TextStyle(
+    fontSize: 15,
+    color: Colors.black,
     overflow: TextOverflow.clip,
   );
   static const TextStyle pageSubThem = TextStyle(
@@ -108,5 +118,10 @@ class AppTheme {
     fontSize: 11,
     color: AppColors.containerBG,
     fontWeight: FontWeight.w300,
+  );
+  static const TextStyle seee = TextStyle(
+    fontSize: 18,
+    color: AppColors.gradBlue,
+    fontWeight: FontWeight.w500,
   );
 }

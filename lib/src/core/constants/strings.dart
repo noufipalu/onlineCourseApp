@@ -35,6 +35,7 @@ class Strings {
   static const String resend = 'Resend code';
   static const String time = 'Time';
   static const String submit = 'Submit';
+  static const String cancel = 'Cancel';
   static const String newPass = 'Enter New Password';
   static const String enterNewPass = 'Please enter your new password';
   static const String rePass = 'Re-Enter Password';
@@ -116,4 +117,30 @@ class Strings {
       "It is a long establishment fact that a reader will be distracted by the redable content of a page when looking as it's layout. The point of using Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
   static const String rew1 =
       "It is a long establishment fact that a reader will be distracted by the redable content of a page when looking as it's layout. The point of using Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+  static const String prof = 'My Profile';
+  static const String edit = 'Edit Profile';
+  static const String changePswd = 'Change Password';
+  static const String paymeth = 'Payment Method';
+  static const String certi = 'My Certificate';
+  static const String darkMode = 'Dark Mode';
+  static const String prpol = 'Privacy Policy';
+  static const String termcon = 'Terms & Conditions';
+  static const String logout = 'Logout';
+  static const String update = 'Update';
+  static const String newpas = 'New Password';
+  static const String confpass = 'Confirm Password';
+  static const String save = 'Save';
+  static const String lastupd = 'Last update:';
+  static const String lstupdate = '05/02/2023';
+  static const String addCmnt = 'Add a comment';
+  static const String rating = 'Please give your rating with us';
+  static const String lstuphead =
+      'Please read these terms of service, carefully before using app operated by us.';
+  static const String conditions = 'Conditions of Uses';
+  static const String lstupdhead =
+      'Please read these privacy policy, carefully before using app operated by us.';
+  static const String feedTitle = 'Thanks For Your Feedback';
+  static const String feedBody =
+      'Your feedback means a lot for the rating and improvement for our course.';
+  static const String done = 'Done';
 }
