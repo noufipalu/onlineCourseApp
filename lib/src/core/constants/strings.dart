@@ -143,4 +143,13 @@ class Strings {
   static const String feedBody =
       'Your feedback means a lot for the rating and improvement for our course.';
   static const String done = 'Done';
+  static const String les = 'Lessons';
+  static const String intro = 'Introduction';
+  static const String basics = 'Basic About Design';
+  static const String wireframe = 'Wireframes';
+  static const String mins1 = '15 mins';
+  static const String mins2 = '45 mins';
+  static const String mins3 = '55 mins';
+  static const String buy = 'Buy Now';
+  static const String courses = 'My Courses';
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:onlinecourseapp/src/core/colors/colors.dart';
-import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
 import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/home_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/message_page.dart';
-import 'package:onlinecourseapp/src/views/widgets/course_details_widget.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_courses_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_profile_page.dart';
 
 class SavedCoursesPage extends StatefulWidget {
   const SavedCoursesPage({super.key});
@@ -20,66 +20,55 @@ class _SavedCoursesPageState extends State<SavedCoursesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.containerBG,
-      body: SafeArea(
+      body: const SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(20.0),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      ImageIconPath.back,
-                      height: 25,
-                      width: 25,
-                    ),
-                    const Expanded(
-                      child: Center(
-                        child: Text(
-                          Strings.savedcourse,
-                          style: AppTheme.pageTitle,
-                        ),
-                      ),
-                    ),
-                  ],
+                Center(
+                  child: Text(
+                    Strings.savedcourse,
+                    style: AppTheme.pageTitle,
+                  ),
                 ),
-                const Column(
-                  children: [
-                    SizedBox(
-                      height: 25,
-                    ),
-                    CourseDetailsWidget(
-                      courseimage: AssetImage(ImageIconPath.ui),
-                      constring: Strings.uiux,
-                      txtstring: Strings.cname1,
-                      price: Strings.pr1,
-                      rating: Strings.st1,
-                      rew: Strings.rev1,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    CourseDetailsWidget(
-                      courseimage: AssetImage(ImageIconPath.suppch),
-                      constring: Strings.bussman,
-                      txtstring: Strings.cname2,
-                      price: Strings.pr2,
-                      rating: Strings.st2,
-                      rew: Strings.rev2,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    CourseDetailsWidget(
-                      courseimage: AssetImage(ImageIconPath.uides),
-                      constring: Strings.uiux,
-                      txtstring: Strings.cname1,
-                      price: Strings.pr1,
-                      rating: Strings.st1,
-                      rew: Strings.rev1,
-                    ),
-                  ],
-                ),
+                // Column(
+                //   children: [
+                //     SizedBox(
+                //       height: 25,
+                //     ),
+                //     CourseDetailsWidget(
+                //       courseimage: AssetImage(ImageIconPath.ui),
+                //       constring: Strings.uiux,
+                //       txtstring: Strings.cname1,
+                //       price: Strings.pr1,
+                //       rating: Strings.st1,
+                //       rew: Strings.rev1,
+                //     ),
+                //     SizedBox(
+                //       height: 10,
+                //     ),
+                //     CourseDetailsWidget(
+                //       courseimage: AssetImage(ImageIconPath.suppch),
+                //       constring: Strings.bussman,
+                //       txtstring: Strings.cname2,
+                //       price: Strings.pr2,
+                //       rating: Strings.st2,
+                //       rew: Strings.rev2,
+                //     ),
+                //     SizedBox(
+                //       height: 10,
+                //     ),
+                //     CourseDetailsWidget(
+                //       courseimage: AssetImage(ImageIconPath.uides),
+                //       constring: Strings.uiux,
+                //       txtstring: Strings.cname1,
+                //       price: Strings.pr1,
+                //       rating: Strings.st1,
+                //       rew: Strings.rev1,
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),
@@ -105,7 +94,7 @@ class _SavedCoursesPageState extends State<SavedCoursesPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyCoursesPage(),
                         ),
                       );
                       break;
@@ -129,7 +118,7 @@ class _SavedCoursesPageState extends State<SavedCoursesPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyProfilePage(),
                         ),
                       );
                       break;

@@ -50,6 +50,11 @@ class AppTheme {
     color: Colors.black,
     fontWeight: FontWeight.w400,
   );
+  static const TextStyle bttnTheme = TextStyle(
+    fontSize: 16,
+    color: Colors.black,
+    fontWeight: FontWeight.w500,
+  );
   static const TextStyle bttTheme = TextStyle(
     fontSize: 15,
     color: Colors.black,

@@ -3,6 +3,7 @@ import 'package:onlinecourseapp/src/core/colors/colors.dart';
 import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
 import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
+import 'package:onlinecourseapp/src/views/widgets/app_button_widget.dart';
 import 'package:onlinecourseapp/src/views/widgets/container_course_name.dart';
 import 'package:onlinecourseapp/src/views/widgets/course_title_widget.dart';
 import 'package:onlinecourseapp/src/views/widgets/review_widget.dart';
@@ -70,7 +71,7 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -127,7 +128,7 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                           children: [
                             Text(
                               Strings.tutor1,
-                              style: AppTheme.pageTitle,
+                              style: AppTheme.coursTheme,
                             ),
                             SizedBox(
                               height: 3,
@@ -165,22 +166,141 @@ class _CourseDetailsPageState extends State<CourseDetailsPage> {
                     const SizedBox(
                       height: 15,
                     ),
-                    ExpansionTile(
-                      title: const Text("Title"),
-                      initiallyExpanded: false,
-                      onExpansionChanged: (bool expanding) {
-                        setState(() {
-                          isExpanded = expanding;
-                        });
-                      },
-                      children: [
-                        Text(
-                          Strings.exp1,
-                          textAlign: TextAlign.justify,
-                          maxLines: isExpanded ? null : 3,
-                          overflow: TextOverflow.ellipsis,
+                    const Text(
+                      Strings.tutAbt,
+                      textAlign: TextAlign.justify,
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      height: 1,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        color: AppColors.line,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text(
+                      Strings.les,
+                      textAlign: TextAlign.left,
+                      style: AppTheme.bttnTheme,
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      leading: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7),
+                          color: AppColors.gradBlue.withOpacity(0.25),
                         ),
-                      ],
+                        child: Image.asset(ImageIconPath.play),
+                      ),
+                      title: const Text(
+                        Strings.intro,
+                        style: AppTheme.courseTheme,
+                      ),
+                      subtitle: const Text(
+                        Strings.mins1,
+                        style: AppTheme.subTitleTheme,
+                      ),
+                      trailing: InkWell(
+                        child: Image.asset(
+                          ImageIconPath.next,
+                          height: 25,
+                          width: 25,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 1,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        color: AppColors.line,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      leading: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7),
+                          color: AppColors.gradBlue.withOpacity(0.25),
+                        ),
+                        child: Image.asset(ImageIconPath.play),
+                      ),
+                      title: const Text(
+                        Strings.basics,
+                        style: AppTheme.courseTheme,
+                      ),
+                      subtitle: const Text(
+                        Strings.mins2,
+                        style: AppTheme.subTitleTheme,
+                      ),
+                      trailing: InkWell(
+                        child: Image.asset(
+                          ImageIconPath.next,
+                          height: 25,
+                          width: 25,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 1,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                        color: AppColors.line,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      leading: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(7),
+                          color: AppColors.gradBlue.withOpacity(0.25),
+                        ),
+                        child: Image.asset(ImageIconPath.play),
+                      ),
+                      title: const Text(
+                        Strings.wireframe,
+                        style: AppTheme.courseTheme,
+                      ),
+                      subtitle: const Text(
+                        Strings.mins3,
+                        style: AppTheme.subTitleTheme,
+                      ),
+                      trailing: InkWell(
+                        child: Image.asset(
+                          ImageIconPath.next,
+                          height: 25,
+                          width: 25,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    AppButtonWidget(
+                      buttonTitle: Strings.buy,
+                      onPressed: () {},
                     ),
                   ],
                 ),

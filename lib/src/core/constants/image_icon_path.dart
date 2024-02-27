@@ -32,6 +32,7 @@ class ImageIconPath {
   static const String prpol = 'assets/icons/prpol.png';
   static const String tc = 'assets/icons/tc.png';
   static const String logout = 'assets/icons/logout.png';
+  static const String play = 'assets/icons/play.png';
 
   static const String learningImage = 'assets/images/output.png';
   static const String chatImage = 'assets/images/output(1).png';

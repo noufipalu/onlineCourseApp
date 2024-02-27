@@ -117,7 +117,7 @@ class _SubmitReviewPageState extends State<SubmitReviewPage> {
       backgroundColor: AppColors.containerBG,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -141,18 +141,18 @@ class _SubmitReviewPageState extends State<SubmitReviewPage> {
                 ],
               ),
               const SizedBox(
-                height: 15,
+                height: 20,
               ),
               Image.asset(ImageIconPath.ui),
               const SizedBox(
-                height: 10,
+                height: 15,
               ),
               const Text(
                 Strings.cname1,
                 style: AppTheme.sheeTheme,
               ),
               const SizedBox(
-                height: 15,
+                height: 20,
               ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -178,7 +178,7 @@ class _SubmitReviewPageState extends State<SubmitReviewPage> {
                 ],
               ),
               const SizedBox(
-                height: 25,
+                height: 30,
               ),
               const Text(
                 Strings.rating,
@@ -202,7 +202,7 @@ class _SubmitReviewPageState extends State<SubmitReviewPage> {
                 },
               ),
               const SizedBox(
-                height: 30,
+                height: 35,
               ),
               Container(
                 height: containerHeight,
@@ -227,7 +227,7 @@ class _SubmitReviewPageState extends State<SubmitReviewPage> {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

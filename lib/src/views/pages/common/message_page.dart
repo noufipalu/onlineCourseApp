@@ -4,6 +4,8 @@ import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
 import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/home_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_courses_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_profile_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/saved_courses_page.dart';
 import 'package:onlinecourseapp/src/views/widgets/chat_list_widget.dart';
 
@@ -209,7 +211,7 @@ class _MessagePageState extends State<MessagePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyCoursesPage(),
                         ),
                       );
                       break;
@@ -225,7 +227,7 @@ class _MessagePageState extends State<MessagePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyProfilePage(),
                         ),
                       );
                       break;

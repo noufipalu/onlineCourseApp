@@ -4,10 +4,11 @@ import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
 import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/change_password_page.dart';
-import 'package:onlinecourseapp/src/views/pages/common/check_out/checkout_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/check_out_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/edit_profile_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/home_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/message_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_courses_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/privacy_policy_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/saved_courses_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/term_cond_page.dart';
@@ -358,7 +359,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyCoursesPage(),
                         ),
                       );
                       break;

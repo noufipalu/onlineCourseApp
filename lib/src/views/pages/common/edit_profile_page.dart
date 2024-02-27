@@ -19,7 +19,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
       backgroundColor: AppColors.containerBG,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               Row(
@@ -181,7 +181,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   ],
                 ),
               ),
-              Expanded(child: SizedBox()),
+              const Expanded(child: SizedBox()),
               AppButtonWidget(
                 buttonTitle: Strings.update,
                 onPressed: () {},

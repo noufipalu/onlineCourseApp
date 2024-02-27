@@ -5,7 +5,10 @@ import 'package:onlinecourseapp/src/core/constants/strings.dart';
 import 'package:onlinecourseapp/src/core/theme/font_style.dart';
 import 'package:onlinecourseapp/src/views/pages/common/featured_course_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/message_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_courses_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/my_profile_page.dart';
 import 'package:onlinecourseapp/src/views/pages/common/saved_courses_page.dart';
+import 'package:onlinecourseapp/src/views/pages/common/search_screen.dart';
 import 'package:onlinecourseapp/src/views/widgets/container_course_name.dart';
 import 'package:onlinecourseapp/src/views/widgets/course_details_widget.dart';
 import 'package:onlinecourseapp/src/views/widgets/course_title_widget.dart';
@@ -104,6 +107,12 @@ class _HomePageState extends State<HomePage> {
                         return SearchBar(
                           controller: controller,
                           onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SearchScreen(),
+                              ),
+                            );
                             controller.openView();
                           },
                           onChanged: (_) {
@@ -478,7 +487,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyCoursesPage(),
                         ),
                       );
                       break;
@@ -502,7 +511,7 @@ class _HomePageState extends State<HomePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomePage(),
+                          builder: (context) => const MyProfilePage(),
                         ),
                       );
                       break;

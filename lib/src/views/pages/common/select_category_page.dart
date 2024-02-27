@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:onlinecourseapp/src/core/colors/colors.dart';
+import 'package:onlinecourseapp/src/core/constants/image_icon_path.dart';
+import 'package:onlinecourseapp/src/core/constants/strings.dart';
+import 'package:onlinecourseapp/src/core/theme/font_style.dart';
+import 'package:onlinecourseapp/src/views/widgets/app_button_widget.dart';
 
 class SelectCategoryPage extends StatefulWidget {
   const SelectCategoryPage({
@@ -10,81 +15,480 @@ class SelectCategoryPage extends StatefulWidget {
 }
 
 class _SelectCategoryPageState extends State<SelectCategoryPage> {
-  final List<String> _interests = [
-    'Design',
-    'Marketing',
-    'Science',
-    'Hacking',
-    'Business',
-    'Photography',
-    'Interior',
-    'Magician',
-    'Finish Development',
-    'Video Editor',
-    'Engienering',
-    'Content'
-  ];
-
-  final List<String> _selectedInterests = [];
-
   @override
   Widget build(BuildContext context) {
+    bool isClicked = false;
+    Color gradientStart =
+        isClicked == true ? AppColors.gradBlue : AppColors.lineDec;
+    Color gradientEnd =
+        isClicked == true ? AppColors.gradGreen : AppColors.lineDec;
+    Color textColor = isClicked == true ? Colors.white : Colors.black;
     return Scaffold(
+      backgroundColor: AppColors.containerBG,
       body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Choose your interest for better search',
-                style: TextStyle(fontSize: 24),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                Strings.interest,
+                style: AppTheme.titleTheme,
               ),
-            ),
-            Container(
-              padding: EdgeInsets.all(8),
-              child: Column(
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                Strings.choose,
+                style: AppTheme.formTextStyle,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  selectableCard('Design', 'assets/icons/design.png'),
-                  selectableCard('Marketing', 'assets/icons/design.png'),
-                  selectableCard('Science', 'assets/icons/design.png'),
-                  selectableCard('Hacking', 'assets/icons/design.png'),
-                  selectableCard('Business', 'assets/icons/design.png'),
-                  selectableCard('Photography', 'assets/icons/design.png'),
-                  selectableCard('Interior', 'assets/icons/design.png'),
-                  selectableCard('Magician', 'assets/icons/design.png'),
-                  selectableCard('Finish', 'assets/icons/design.png'),
-                  selectableCard('Development', 'assets/icons/design.png'),
-                  selectableCard('Video Editor', 'assets/icons/design.png'),
-                  selectableCard('Engienering', 'assets/icons/design.png'),
-                  selectableCard('Content', 'assets/icons/design.png'),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
                 ],
               ),
-            ),
-            SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  // Your function here
-                },
-                child: Text('Select'),
+              const SizedBox(
+                height: 15,
               ),
-            ),
-          ],
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        gradient: LinearGradient(
+                          colors: [
+                            gradientStart,
+                            gradientEnd,
+                          ],
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            ImageIconPath.design,
+                            height: 30,
+                            width: 30,
+                          ),
+                          Text(
+                            Strings.design,
+                            style: TextStyle(color: textColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        isClicked = true;
+                      });
+                    },
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Container(),
+              ),
+              AppButtonWidget(buttonTitle: Strings.finish, onPressed: () {})
+            ],
+          ),
         ),
-      ),
-    );
-  }
-
-  Widget selectableCard(String title, String imagePath) {
-    return Card(
-      margin: EdgeInsets.all(8),
-      child: Row(
-        children: [
-          Image.asset(imagePath, width: 60, height: 60),
-          SizedBox(width: 10),
-          Text(title, style: TextStyle(fontSize: 20)),
-        ],
       ),
     );
   }
